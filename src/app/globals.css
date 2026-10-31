@@ -1,6 +1,9 @@
 html,
 body {
-  --bs-light-rgb: 236, 236, 236;
+  --bs-dark: var(--nat-navbar-bg);
+  --bs-dark-rgb: var(--nat-navbar-bg-rgb);
+  background-image: url('../../public/bananas.png');
+  background-size: cover;
   box-sizing: border-box;
   height: 100%;
   padding: 0;
@@ -11,4 +14,23 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+body .navbar {
+  --bs-navbar-active-color: var(--nat-navbar-highlight-text);
+  --bs-navbar-brand-color: var(--nat-navbar-text-color);
+  --bs-navbar-brand-hover-color: var(--nat-navbar-highlight-text);
+  --bs-navbar-color: var(--nat-navbar-text-color);
+  --bs-navbar-hover-color: var(--nat-navbar-highlight-text);
+}
+footer, footer a {
+  color: var(--nat-navbar-text-color);
+}
+.bg-dark a.dropdown-item {
+  color: var(--nat-navbar-bg);
+}
+:root {
+  --nat-navbar-bg: #997d0f;
+  --nat-navbar-bg-rgb: 153, 139, 15;
+  --nat-navbar-text-color: white;
+  --nat-navbar-highlight-text: rgb(229, 29, 226);
 }
