@@ -7,6 +7,14 @@ export const AddStuffSchema = Yup.object({
   owner: Yup.string().required(),
 });
 
+export interface Contact {
+  firstName: string;
+  lastName: string;
+  address: string;
+  image: string;
+  description: string;
+}
+
 export const EditStuffSchema = Yup.object({
   id: Yup.number().required(),
   name: Yup.string().required(),
