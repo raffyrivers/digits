@@ -2,7 +2,7 @@ html,
 body {
   --bs-dark: var(--nat-navbar-bg);
   --bs-dark-rgb: var(--nat-navbar-bg-rgb);
-  background-image: url('../../public/bananas.png');
+  background-image: url('../../public/awsomefacebg.jpg');
   background-size: cover;
   box-sizing: border-box;
   height: 100%;
