@@ -1,9 +1,10 @@
 'use client';
-import { Contact } from '@/lib/validationSchemas';
+import Link from 'next/link';
+import { EditContact } from '@/lib/validationSchemas';
 import { Image } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 /* Renders a single row in the List Stuff table. See list/page.tsx. */
-const ContactCard = ({ firstName, lastName, address, image, description }: Contact) => (
+const ContactCard = ({ id, firstName, lastName, address, image, description }: EditContact) => (
   <Card className='h-100'>
     <Image className='mx-2 my-2' src={image} alt={`${firstName} ${lastName}`} height={75} width={75} />
     <Card.Title className='mx-2'>{firstName} {lastName}</Card.Title>
@@ -11,6 +12,9 @@ const ContactCard = ({ firstName, lastName, address, image, description }: Conta
     <Card.Body className='border-top'>
       <Card.Text>{description}</Card.Text>
     </Card.Body>
+    <Card.Footer>
+      <Link href={`/edit/${id}`}>Edit</Link>
+</Card.Footer>
   </Card>
 );
 
