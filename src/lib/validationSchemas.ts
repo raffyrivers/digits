@@ -7,6 +7,21 @@ export const AddStuffSchema = Yup.object({
   owner: Yup.string().required(),
 });
 
+export const AddContactSchema = Yup.object({
+  firstName: Yup.string().required(),
+  lastName: Yup.string().required(),
+  address: Yup.string().required(),
+  image: Yup.string().url().required(),
+  description: Yup.string().required(),
+  owner: Yup.string().required(),
+});
+
+export const AddNoteSchema = Yup.object({
+  note: Yup.string().required(),
+  contactId: Yup.number().required(),
+  owner: Yup.string().required(),
+});
+
 export interface Contact {
   id: number;
   firstName: string;
@@ -25,14 +40,6 @@ export const EditStuffSchema = Yup.object({
   owner: Yup.string().required(),
 });
 
-export const AddContactSchema = Yup.object({
-  firstName: Yup.string().required(),
-  lastName: Yup.string().required(),
-  address: Yup.string().required(),
-  image: Yup.string().url().required(),
-  description: Yup.string().required(),
-  owner: Yup.string().required(),
-});
 
 export const EditContactSchema = Yup.object({
   id: Yup.number().required(),
@@ -43,3 +50,4 @@ export const EditContactSchema = Yup.object({
   description: Yup.string().required(),
   owner: Yup.string().required(),
 });
+
