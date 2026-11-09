@@ -1,9 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import { prisma } from '@/lib/prisma';
-//import StuffItem from '@/components/StuffItem';
 import { loggedInProtectedPage } from '@/lib/page-protection';
 import { auth } from '@/lib/auth';
-//import { Contact } from '@/lib/validationSchemas';
 import ContactCard from '@/components/ContactCard';
 
 /** Render a list of stuff for the logged in user. */
